@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import type { ReactNode } from 'react'
 
 interface Column<T> {
   key: keyof T | string
@@ -14,7 +14,7 @@ interface TableProps<T> {
   hoverable?: boolean
 }
 
-export function Table<T extends Record<string, unknown>>({
+export function Table<T>({
   columns,
   data,
   striped = true,
@@ -97,5 +97,5 @@ export function TableDemo() {
     { key: 'email', header: '이메일' },
   ]
 
-  return <Table columns={columns} data={sampleData} />
+  return <Table<SampleData> columns={columns} data={sampleData} />
 }

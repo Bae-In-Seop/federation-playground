@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import federation from '@originjs/vite-plugin-federation'
+import { federation } from '@module-federation/vite'
 
 export default defineConfig({
   base: '/federation-playground/',
@@ -12,7 +12,16 @@ export default defineConfig({
       exposes: {
         './App': './src/App.tsx',
       },
-      shared: ['react', 'react-dom'],
+      shared: {
+        react: {
+          singleton: true,
+          requiredVersion: '^19.0.0',
+        },
+        'react-dom': {
+          singleton: true,
+          requiredVersion: '^19.0.0',
+        },
+      },
     }),
   ],
   build: {

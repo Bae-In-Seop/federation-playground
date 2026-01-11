@@ -3,3 +3,13 @@ export { default as Badge } from './Badge'
 export { default as Card } from './Card'
 export { default as Input } from './Input'
 export { default as Toggle } from './Toggle'
+
+// New components
+export { IconButton } from './IconButton'
+export { DatePicker } from './DatePicker'
+export { Radio, RadioGroup } from './Radio'
+export { Checkbox, CheckboxGroup } from './Checkbox'
+export { ToastProvider, ToastDemo, useToast } from './Toast'
+export { Modal, ModalDemo } from './Modal'
+export { Table, TableDemo } from './Table'
+export { ChartDemo, LineChartDemo, BarChartDemo, PieChartDemo, AreaChartDemo } from './Chart'

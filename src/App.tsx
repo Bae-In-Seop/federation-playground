@@ -14,6 +14,8 @@ import {
   ModalDemo,
   TableDemo,
   ChartDemo,
+  TabsDemo,
+  AccordionDemo,
 } from './components'
 import './App.css'
 
@@ -180,6 +182,14 @@ function AppContent() {
             />
           </div>
         </div>
+      </Showcase>
+
+      <Showcase title="Tabs">
+        <TabsDemo />
+      </Showcase>
+
+      <Showcase title="Accordion">
+        <AccordionDemo />
       </Showcase>
 
       <Showcase title="Date Picker">
